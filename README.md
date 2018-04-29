@@ -2,6 +2,8 @@
 
 The role to install some global node.js packages with npm.
 
+[![Build Status](https://travis-ci.org/0x4e3/osx-bootstrap-npm.svg?branch=master)](https://travis-ci.org/0x4e3/osx-bootstrap-npm)
+
 ## Requirements
 
 You should have ```homebrew``` installed.
