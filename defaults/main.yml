@@ -1,2 +1,4 @@
 ---
-# defaults file for osx-npm
+node_brew_package: node@8
+
+npm_global_packages: []

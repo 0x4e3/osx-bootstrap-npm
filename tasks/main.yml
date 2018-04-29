@@ -1,2 +1,11 @@
 ---
-# tasks file for osx-npm
+- name: Ensure node and npm installed
+  homebrew: name={{ node_brew_package }} state=present
+
+- name: Install global packages
+  npm:
+    global: yes
+    name: {{ item.name }}
+    state: present
+    version: {{item.version}}
+  with_items:  "{{ npm_global_packages }}"

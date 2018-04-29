@@ -1,38 +1,48 @@
-Role Name
-=========
+# osx-bootstrap-npm
 
-A brief description of the role goes here.
+The role to install some global node.js packages with npm.
 
-Requirements
-------------
+## Requirements
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+You should have ```homebrew``` installed.
 
-Role Variables
---------------
+## Role Variables
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+* ```node_brew_package``` -- the name of homebrew packaage with node.js and npm, ```node@8``` is the default value.
+* ```npm_global_packages``` -- the list of packages you want to install, default value is an empty list.
 
-Dependencies
-------------
+## Dependencies
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+No.
 
-Example Playbook
-----------------
+## Example Playbook
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+```playbook.yml```:
+```yml
+---
+- host: localhost
+  vars_files:
+    - vars/npm.yml
+  roles:
+    - 0x4e3.osx-bootstrap-npm
+```
 
-License
--------
+```vars/npm.yml```
+```yml
+---
+npm_global_packages:
+  - name: gulp
+    version: 3.9.1
+  - name: ember-cli
+    version: 2.11.1
+  - name: react-native-cli
+    version: 2.0.1
+  - name: phantomjs
+    version: 2.1.7
+```
+
+## License
 
 BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
