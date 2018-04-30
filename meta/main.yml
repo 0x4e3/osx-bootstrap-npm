@@ -7,6 +7,7 @@ galaxy_info:
   - name: MacOSX
     versions:
     - 10.11
+    - 10.12
   galaxy_tags:
   - packaging
   - osx
