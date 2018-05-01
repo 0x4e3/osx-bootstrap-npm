@@ -3,6 +3,7 @@
 The role to install some global node.js packages with npm.
 
 [![Build Status](https://travis-ci.org/0x4e3/osx-bootstrap-npm.svg?branch=master)](https://travis-ci.org/0x4e3/osx-bootstrap-npm)
+[![GitHub license](https://img.shields.io/github/license/0x4e3/osx-bootstrap-npm.svg)](https://github.com/0x4e3/osx-bootstrap-npm/blob/master/LICENSE)
 
 ## Requirements
 
@@ -42,7 +43,3 @@ npm_global_packages:
   - name: phantomjs
     version: 2.1.7
 ```
-
-## License
-
-BSD
